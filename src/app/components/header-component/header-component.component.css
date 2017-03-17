@@ -1,0 +1,18 @@
+.logoContainer{
+  height: 75px;
+  padding: 20px;
+  padding-left: 30px ;
+  background-image: -webkit-linear-gradient(top,#424242 0,#242424 100%);
+}
+.infoBox{
+  line-height: 34px;
+}
+.menuItemTabActive{
+  font-weight: 600;
+}
+.helpIcon{
+  font-size: 25px;
+}
+.languageContainer{
+  float: right;
+}

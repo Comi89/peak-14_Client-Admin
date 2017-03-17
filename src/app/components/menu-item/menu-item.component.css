@@ -1,0 +1,15 @@
+.menuItemsTitle{
+  font-weight: 600;
+  font-size: 17px;
+}
+.menuItems{
+  padding: 2px 0 2px 19px;
+  font-size: 17px;
+}
+.menuItemText{
+  cursor: pointer;
+  padding-left: 5px;
+}
+.highlight{
+  background: black;
+}

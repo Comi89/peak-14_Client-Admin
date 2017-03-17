@@ -1,0 +1,57 @@
+<div class="row col-md-12 logoContainer">
+  <div class="col-md-1">
+    <img src="../assets/images/logo-small.png" alt="" />
+  </div>
+  <div class="col-md-11 infoBox">
+    <div class="col-md-12 row ifnoContainer">
+      <div class="col-md-2 row">
+        <div class="col-md-9 menuItemTabActive">
+          {{activeMenuItem}}
+        </div>
+        <div class="col-md-3 helpIcon">
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-md-10 row">
+        <div *ngIf="clientSelectBox === true" class="col-md-3 row">
+          <div class="col-md-3">
+            Client:
+          </div>
+          <div class="col-md-9">
+            <select class="form-control">
+                <option value="one">One</option>
+                <option value="two">Two</option>
+                <option value="three">Three</option>
+                <option value="four">Four</option>
+                <option value="five">Five</option>
+            </select>
+          </div>
+        </div>
+        <div *ngIf="searchSelectBox === true" class="col-md-3 row">
+          <div class="col-md-3">
+            Search:
+          </div>
+          <div class="col-md-9">
+            <select class="form-control">
+                <option value="one">One</option>
+                <option value="two">Two</option>
+                <option value="three">Three</option>
+                <option value="four">Four</option>
+                <option value="five">Five</option>
+            </select>
+          </div>
+        </div>
+        <div *ngIf="searchInput === true" class="col-md-3 row">
+          <div class="col-md-12">
+            <input class="form-control" type="input" name="name" value="">
+          </div>
+        </div>
+
+        <div class="btn-group col-md-3 languageContainer">
+          <button class="btn btn-primary lanuageBtn" (click)="changeLang('en')" [(ngModel)]="langModel" ngDefaultControl [disabled]="disableLangBtns.en" btnRadio="en">{{"England" | translate}}</button>
+          <button class="btn btn-primary lanuageBtn" (click)="changeLang('de')" [(ngModel)]="langModel" ngDefaultControl [disabled]="disableLangBtns.de" btnRadio="de">{{"Germany" | translate}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
