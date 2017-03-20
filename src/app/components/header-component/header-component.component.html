@@ -3,7 +3,7 @@
     <img src="../assets/images/logo-small.png" alt="" />
   </div>
   <div class="col-md-11 infoBox">
-    <div class="col-md-12 row ifnoContainer">
+    <div class="row ifnoContainer">
       <div class="col-md-2 row">
         <div class="col-md-9 menuItemTabActive">
           {{activeMenuItem}}
@@ -41,15 +41,22 @@
             </select>
           </div>
         </div>
-        <div *ngIf="searchInput === true" class="col-md-3 row">
+        <div *ngIf="searchInput === true" class="col-md-2 row">
           <div class="col-md-12">
             <input class="form-control" type="input" name="name" value="">
           </div>
         </div>
 
-        <div class="btn-group col-md-3 languageContainer">
-          <button class="btn btn-primary lanuageBtn" (click)="changeLang('en')" [(ngModel)]="langModel" ngDefaultControl [disabled]="disableLangBtns.en" btnRadio="en">{{"England" | translate}}</button>
-          <button class="btn btn-primary lanuageBtn" (click)="changeLang('de')" [(ngModel)]="langModel" ngDefaultControl [disabled]="disableLangBtns.de" btnRadio="de">{{"Germany" | translate}}</button>
+        <div class="btn-group col-md-4 row languageContainer">
+          <div class="col-md-10 languageBtnsContainer">
+            <button class="btn btn-primary lanuageBtn" (click)="changeLang('en')" [(ngModel)]="langModel" ngDefaultControl [disabled]="disableLangBtns.en" btnRadio="en">{{"England" | translate}}</button>
+            <button class="btn btn-primary lanuageBtn" (click)="changeLang('de')" [(ngModel)]="langModel" ngDefaultControl [disabled]="disableLangBtns.de" btnRadio="de">{{"Germany" | translate}}</button>
+          </div>
+          <!-- <div class="col-md-2">
+          </div> -->
+          <div class="col-md-2">
+            Logout
+          </div>
         </div>
       </div>
     </div>

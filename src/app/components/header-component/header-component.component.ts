@@ -29,7 +29,6 @@ export class HeaderComponentComponent implements OnInit {
   searchInput = true;
 
   constructor(private translate: TranslateService, private _menuEventsService: menuEventsService, private _menuItemsService: MenuItemsService) {
-      let menuItems = this._menuItemsService.getMenuItems();
       this._menuEventsService.activeMenuItem$.subscribe(
         data => {
           this.activeMenuItem = data;

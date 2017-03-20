@@ -9,9 +9,14 @@ import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import {TranslateModule} from "ng2-translate";
 import { HeaderComponentComponent } from './components/header-component/header-component.component';
 import { menuEventsService } from './services/shared/menuEvents.service';
+import { LoadingIndicatorService } from './services/shared/loading-indicator.service';
 import { MenuItemsService } from './services/resources/menu-items.service';
+import { GetAllClientsService } from './services/http/get-all-clients.service';
 import { UsersComponent } from './components/users/users.component';
 import { GroupsComponent } from './components/groups/groups.component';
+import { ClientsComponent } from './components/clients/clients.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,10 @@ import { GroupsComponent } from './components/groups/groups.component';
     MenuItemComponent,
     HeaderComponentComponent,
     UsersComponent,
-    GroupsComponent
+    GroupsComponent,
+    ClientsComponent,
+    FooterComponent,
+    LoadingIndicatorComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,7 @@ import { GroupsComponent } from './components/groups/groups.component';
     HttpModule,
     TranslateModule.forRoot()
   ],
-  providers: [menuEventsService, MenuItemsService],
+  providers: [menuEventsService, MenuItemsService, GetAllClientsService, LoadingIndicatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

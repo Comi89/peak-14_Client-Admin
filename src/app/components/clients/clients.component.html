@@ -1,0 +1,19 @@
+<div class="clientsContainer col-md-12">
+  <!-- <ul>
+    <li *ngFor="let client of clientsArray">{{client}}</li>
+  </ul> -->
+  <table class="table table-striped tableCustomStyle">
+    <thead>
+      <tr>
+        <th (click)="sortTable(clientsArray)">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clientsArray">
+        <td>
+          {{client}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
